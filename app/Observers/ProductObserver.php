@@ -8,7 +8,7 @@ use App\Models\Product;
 class ProductObserver
 {
    /**
-     * Handle the category "creating" event.
+     * Handle the product "creating" event.
      *
      * @param  \App\Models\Product  $product
      * @return void
@@ -16,6 +16,8 @@ class ProductObserver
     public function creating(Product $product)
     {
         $product->flag = Str::kebab($product->title);
+        $product->uuid = Str::uuid();
+
     }
 
     /**
