@@ -144,12 +144,14 @@ class TableController extends Controller
         return view('admin.pages.tables.index', compact('tables', 'filters'));
     }
 
+
     /**
-     * Generate QrCode Table
+     * Generate QRCode Table.
      *
-     * @param  string  $identify
+     * @param  string $identify
      * @return \Illuminate\Http\Response
      */
+
     public function qrcode($identify)
     {
         if (!$table = $this->repository->where('identify', $identify)->first()) {
