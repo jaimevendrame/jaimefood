@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Jaime</b>Food',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>já</b>ENTREGO',
+    'logo_img' => 'imgs/jaentrego-icon.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'JaimeFood',
+    'logo_img_alt' => 'jáENTREGO',
 
     /*
     |--------------------------------------------------------------------------
@@ -167,7 +167,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
 
     'logout_url' => 'logout',
 
@@ -214,6 +214,11 @@ return [
         //     'topnav' => true,
         // ],
         [
+            'text' => 'Home',
+            'url'  => 'admin',
+            'icon' => 'fas fa-tachometer-alt',
+        ],
+        [
             'text' => 'Empresas',
             'url'  => 'admin/tenants',
             'icon' => 'fas fa-building',
@@ -258,7 +263,7 @@ return [
         [
             'text' => 'Produtos',
             'url'  => 'admin/products',
-            'icon' => 'fas fa-layer-group',
+            'icon' => 'fas fa-hamburger',
             'can'  => 'products',
         ],
         [

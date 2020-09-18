@@ -37,6 +37,8 @@ class Evaluationtest extends TestCase
         $token = $client->createToken(Str::random(10))->plainTextToken;
 
         $order = $client->orders()->save(factory(Order::class)->make());
+
+        // dd($order);
        
         $payload = [
             'stars' => 5,
@@ -49,12 +51,10 @@ class Evaluationtest extends TestCase
 
 
         $response = $this->postJson(
-            "/api/auth/v1/orders/{$order}/evaluations",
+            "/api/auth/v1/orders/{$order->identify}/evaluations",
             $payload,
             $headers
         );
-        
-        $response->dump();
 
         $response->assertStatus(201);
     }
