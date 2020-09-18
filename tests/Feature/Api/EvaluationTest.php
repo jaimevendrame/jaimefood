@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class Evaluationtest extends TestCase
+class EvaluationTest extends TestCase
 {
     /**
      * Test Error Create New Evaluation
