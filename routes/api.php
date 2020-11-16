@@ -1,6 +1,6 @@
 <?php
 
-Route::post('/auth/register', 'Auth\RegisterController@store');
+Route::post('/auth/register', 'Api\Auth\RegisterController@store');
 Route::post('/auth/token', 'Api\Auth\AuthClientController@auth');
 
 Route::group([

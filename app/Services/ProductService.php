@@ -23,6 +23,8 @@ class ProductService
     {
         $tenant = $this->tenantRepository->getTenantByUuid($uuid);
 
+        // dd($tenant->id);
+
         return $this->productRepository->getProductsByTenantId($tenant->id, $categories);
     }
 
